@@ -54,11 +54,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+  let mySum =sum(sum(a,b)[0],c)[0]
+  let myProduct = multiply(a,b)[0]
+  let myProducttotal = multiply(myProduct,c)[0] 
+  let mystringsum = `${a} and ${b} and ${c} sum to ${mySum}.`;
+  let mystringproduct = `The product of ${a} and ${b} and ${c} is ${myProducttotal}.`;
+console.log(mySum,myProducttotal,mystringsum,mystringproduct)
+  return [mySum,myProducttotal,mystringsum,mystringproduct];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
+
+
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -84,6 +93,10 @@ function sumArray(sumArr) { //eslint-disable-line
 // testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
+
+
+
+
 
 /////////////////////////////////////
 /* Problem 5
